@@ -1,0 +1,112 @@
+<!DOCTYPE html> 
+<head>
+    <title>Home Page</title>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"> 
+
+    <style>
+        body{
+            margin:0;
+        }
+        
+        .container{
+            width:100vw;
+            height:100vh;
+
+            font-weight: bold;
+            font-size: 20px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            
+            /* if i want a gap use "gap" */
+
+            
+            box-sizing: border-box;
+        }
+
+        .container div {
+            /*if i want a border use "padding" and "border"*/
+            
+        }
+        .contain{
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+            background-color: #6699CC;
+            
+        }
+        .left-side{
+            display: flex;
+        }
+        .contain >.left-side >div{
+            margin-right: 20px;
+            font: size 0.9em;
+            text-transform: uppercase;
+        }
+        .contain{
+            height: 22px;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.5s;
+        }
+        .link-wrapper a{
+            color:white;
+            text-decoration: none;
+            transition: color 0.5s;
+        }
+        .link-wrapper a:hover{
+            color:black;
+        }
+        
+        .active-nav-link a{
+            color:black !important;
+        }
+        
+        /*TEXT*/
+    
+        .text{
+            background-color: #6699CC;
+            grid-column-start:1;
+            grid-row-start:2;
+            text-align: center;
+        }
+        .background{
+            background-color: #6699CC;
+            grid-column-start: 1;
+            grid-row-start: 3;
+        }
+</style>
+
+
+
+</head>
+
+<body>
+
+    <div class ="container">
+        <div class = "contain">
+            <div class = "left-side">
+                <div class = "link-wrapper active-nav-link">
+                    <a href = "home.html">Home</a>
+                </div>
+                <div class ="link-wrapper">
+                    <a href = "about.html">About</a>
+                </div>
+                <div class = "link-wrapper">
+                    <a href = "portraits.html">Portfolio</a>
+                </div>
+                <div class = "link-wrapper">
+                    <a href = "b4After.html">Magical</a>
+                </div>
+            </div>
+        </div>
+        <div class = "background"></div>
+        <div class = "text">
+            <h1>Joseph</h1>
+            <p>Hello im from UMB</p>
+        </div>
+        
+    </div>
+
+</body>
