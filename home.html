@@ -1,0 +1,273 @@
+<!DOCTYPE html> 
+<head>
+    <title>Home Page</title>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <meta charset="utf-8"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+</head>
+    <style>
+        body{
+            margin:0;
+        }
+        /*FONT*/
+        .container{
+            font-family: Roboto, sans-serif !important;
+        }
+        .container{
+            width:100vw;
+            height:100vh;
+
+            font-weight: bold;
+            font-size: 15px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            
+            /* if i want a gap use "gap" */
+
+            
+            box-sizing: border-box;
+        }
+
+        .container div {
+            /*if i want a border use "padding" and "border"*/
+                
+        }
+        /* the Header*/
+        .contain{
+            display: flex;
+            justify-content:center ;
+            padding: 30px;
+            background-color:tan;
+            
+        }
+        .left-side{
+            display: flex;
+        }
+        .contain >.left-side >div{
+            margin-right: 20px;
+            font: size 0.9em;
+            text-transform: uppercase;
+        }
+        .contain{
+            height: 22px;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.5s;
+        }
+        .link-wrapper a{
+            color:white;
+            text-decoration: none;
+            transition: color 0.5s;
+        }
+        .link-wrapper a:hover{
+            color:black;
+        }
+        
+        .active-nav-link a{
+            color:black !important;
+        }
+        
+        /*TEXT*/
+    
+        .text{
+            background-color:tan;
+            grid-column-start:1;
+            grid-row-start:2;
+            text-align: center;
+        }
+        /* the row 3 column 1*/
+
+        /* merge rows // Made the whole background blue*/
+        .container{
+            background-color:tan;
+        }
+
+        /* My NAME ON HOME PAGE */
+        @font-face {
+            font-family: myFont;
+            src: url(BebasNeue-Regular.ttf);
+        }
+        .BIG-NAME{
+            font-family: myFont;
+            font-size: 100px;
+
+        }
+        /*subtitle under my name*/
+        .subtitle-1{
+            font-size: 18px;
+        }
+
+        .font-me{
+            font-family:myFont;
+            font-size: 50px;
+        }
+        .people{
+            font-family:myFont;
+            font-size:40px;
+            text-align: center;
+        }
+        /* About page*/
+        .about-me{
+            background-color: beige;
+            grid-column-start: 2;
+            grid-row-start: 3;
+            text-align: center;
+            padding:0px;
+        }
+        .paragraph{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        a.button2{
+            display: inline-block;
+            padding: 0.5em 3em;
+            border: 0.16em solid black;
+            margin: 0 0.3em 0.3em 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: black;
+            text-align: center;
+            transition: all 0.15s;
+        }
+        a.button2:hover{
+            color:orange;
+            border-color: orange;
+        }
+        
+        a.button2:active{
+            color:aqua;
+            border-color: aqua;
+        }
+        @media all and(max-width:30em){
+            a.button2{
+                display:block;
+                margin:0.4em auto;
+            }
+        }
+        /* Portrait of me*/
+        .portrait{
+            grid-area: portrait;
+            grid-column-start:2;
+            grid-column-end: 3;
+            grid-row-start:1;
+            grid-row-end: 3;
+        }
+        .portrait>img{
+            object-fit: cover;
+            width: 100%;
+            max-height: 100%;
+        }
+        /* Top right of the website*/
+        .portfolio{
+            background-color: beige;
+            text-align: center;
+        }
+        
+        .link-portraits{
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+            
+        }
+
+        .link-portraits a{
+            color:black;
+            text-decoration: none;
+        }
+
+        .link-portraits a:hover{
+            color:brown;
+        }
+
+        /* Photo on the bottom right*/
+        .photo-bottom{
+            display:block;
+            grid-area: photo-bottom;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start:2;
+            grid-row-end: span 3;
+            
+            
+        }
+        .photo-bottom{
+            background-image: url("photos/blurryaf.jpg");
+            background-size:contain;
+        }
+        .photo-bottom>img{
+            object-fit:contain;
+            width: 100%;
+            height: 99%;   
+        }
+        .img.background{
+            position:absolute;
+            width: 100%;
+            height: 100%;
+        }
+        /* Top right of the main page*/
+        .iream{
+            text-align: center;
+            font-size: 20px;
+        }
+
+</style>
+
+</head>
+
+<body>
+
+    <div class ="container">
+        <div class = "contain">
+            <div class = "left-side">   
+                <div class = "link-wrapper active-nav-link">
+                    <a href = "home.html">Home</a>
+                </div>
+                <div class ="link-wrapper">
+                    <a href = "read-more.html">About</a>
+                </div>
+                <div class = "link-wrapper">
+                    <a href = "#">Portfolio</a>
+                </div>
+                <div class = "link-wrapper">    
+                    <a href = "#">Magical</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class = "text">
+            <h1 class = "BIG-NAME">Joseph</h1>
+            <p class = "subtitle-1"> The hobbyist </p>
+        </div>
+        
+        <div class = "about-me">
+            <h1 class = "font-me">About me</h1>
+            <p class = "paragraph">Hello im from UMB. I'm currently a second year student for Computer Science. I always had the love of taking photos, I loved the idea of capturing
+                the moment. The idea of capturing the still moment and looking back at that photo to see the memories that was once was. People say we can't time-travel but 
+            we sure can trap time within a photo. Taking photos for me is as if i'm putting an memory into an image.  </p>
+            <a href = "read-more.html" class = "button2">Read more</a>
+        </div>
+        
+        <div class = "portrait">
+            <img src = "adrien-delforge-OnAYznhh4d8-unsplash.jpg">
+        </div>
+
+        <div class = "portfolio">
+            <h1 class = "people">Portraits of Beautiful people</h1>
+            <p class = "iream"> Smiles that are unforgettable</p>
+            <a href = "portraits.html" class = "button2">Portraits</a>
+        </div>
+        
+        <div class ="photo-bottom">
+            <img src = "photos/portrait.jpg">
+        </div>
+
+        <div class = "background">
+            
+        </div>
+    </div>
+
+</body>
